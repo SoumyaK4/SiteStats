@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uptime Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+    th { background-color: #f4f4f4; }
+    .up { color: green; }
+    .down { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Site Uptime Dashboard</h1>
+  <!-- The table content will be updated by the script -->
+  <div id="dashboard">
+    <table>
+      <thead>
+        <tr>
+          <th>Site Name</th>
+          <th>Status</th>
+          <th>Response Time (ms)</th>
+          <th>Last Checked (IST)</th>
+          <th>Last Down (IST)</th>
+        </tr>
+      </thead>
+      <tbody id="uptime-data">
+        <tr>
+          <td colspan="5">Data not yet available. Please wait for the first update.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
