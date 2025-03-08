@@ -1,3 +1,6 @@
+permissions:
+  contents: write
+
 name: Uptime Check
 
 on:
@@ -25,3 +28,5 @@ jobs:
         with:
           message: "Update uptime data [skip ci]"
           add: "data.json"
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
