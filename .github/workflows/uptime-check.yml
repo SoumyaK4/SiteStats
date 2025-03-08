@@ -1,0 +1,27 @@
+name: Uptime Check
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # Runs every hour on the hour
+  workflow_dispatch:       # Allows manual trigger
+
+jobs:
+  uptime-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Run Uptime Check Script
+        run: node uptime-check.js
+
+      - name: Commit updated data.json
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Update uptime data [skip ci]"
+          add: "data.json"
