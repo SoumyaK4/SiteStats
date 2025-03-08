@@ -2,36 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Uptime Dashboard</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-    th { background-color: #f4f4f4; }
-    .up { color: green; }
-    .down { color: red; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uptime Monitor</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Site Uptime Dashboard</h1>
-  <!-- The table content will be updated by the script -->
-  <div id="dashboard">
-    <table>
+  <div class="container">
+    <h1>Uptime Monitor</h1>
+    <table id="uptime-table">
       <thead>
         <tr>
           <th>Site Name</th>
           <th>Status</th>
-          <th>Response Time (ms)</th>
+          <th>Response Time</th>
           <th>Last Checked (IST)</th>
           <th>Last Down (IST)</th>
         </tr>
       </thead>
-      <tbody id="uptime-data">
-        <tr>
-          <td colspan="5">Data not yet available. Please wait for the first update.</td>
-        </tr>
+      <tbody>
+        <!-- Table rows will be dynamically injected -->
       </tbody>
     </table>
   </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
