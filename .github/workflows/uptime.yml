@@ -1,21 +1,9 @@
-- name: Check Uptime
-  env:
-    PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    if [ -n "$(git status --porcelain)" ]; then
-      git add index.html sites.json
-      git commit -m "Uptime update [skip ci]"
-      # Use the PAT for pushing changes
-      git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
-    else
-      echo "No changes to commit."
-    fi
-- on:
+name: Check Uptime
+
+on:
   schedule:
-    - cron: '0 * * * *'  # runs at the start of every hour
-  workflow_dispatch:  # allows manual triggering
+    - cron: '0 * * * *'  # Runs at the start of every hour
+  workflow_dispatch:    # Allows manual triggering
 
 jobs:
   build:
@@ -40,14 +28,15 @@ jobs:
           python uptime_checker.py
 
       - name: Commit and push changes
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # Only commit if there are changes
           if [ -n "$(git status --porcelain)" ]; then
             git add index.html sites.json
             git commit -m "Uptime update [skip ci]"
-            git push
+            git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
           else
             echo "No changes to commit."
           fi
