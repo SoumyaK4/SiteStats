@@ -2,41 +2,58 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch("data.json")
     .then(response => response.json())
     .then(data => {
-      const tbody = document.querySelector("#uptime-table tbody");
-      tbody.innerHTML = "";
+      const container = document.getElementById("cards-container");
+      container.innerHTML = "";
       data.forEach(site => {
-        const tr = document.createElement("tr");
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-        // Site name with link
-        const siteNameTd = document.createElement("td");
+        // Site Name with Link
+        const siteName = document.createElement("h2");
         const link = document.createElement("a");
         link.href = site.url;
         link.textContent = site.name;
         link.target = "_blank";
-        siteNameTd.appendChild(link);
-        tr.appendChild(siteNameTd);
+        siteName.appendChild(link);
+        card.appendChild(siteName);
 
-        // Status (up/down)
-        const statusTd = document.createElement("td");
-        statusTd.textContent = site.status;
-        tr.appendChild(statusTd);
+        // Status with Emoji and Color
+        const statusDiv = document.createElement("div");
+        statusDiv.classList.add("status");
+        let statusText, statusClass;
+        if (site.status === "up") {
+          statusText = "👍 Up";
+          statusClass = "status-up";
+        } else if (site.status === "slow") {
+          statusText = "⚠️ Slow";
+          statusClass = "status-slow";
+        } else if (site.status === "down") {
+          statusText = "👎 Down";
+          statusClass = "status-down";
+        }
+        statusDiv.textContent = statusText;
+        statusDiv.classList.add(statusClass);
+        card.appendChild(statusDiv);
 
-        // Response time
-        const responseTimeTd = document.createElement("td");
-        responseTimeTd.textContent = site.responseTime;
-        tr.appendChild(responseTimeTd);
+        // Response Time
+        const responseTimeDiv = document.createElement("div");
+        responseTimeDiv.classList.add("response-time");
+        responseTimeDiv.textContent = "Response Time: " + site.responseTime;
+        card.appendChild(responseTimeDiv);
 
-        // Last checked datetime (IST)
-        const lastCheckedTd = document.createElement("td");
-        lastCheckedTd.textContent = site.lastChecked;
-        tr.appendChild(lastCheckedTd);
+        // Last Checked (IST)
+        const lastCheckedDiv = document.createElement("div");
+        lastCheckedDiv.classList.add("last-checked");
+        lastCheckedDiv.textContent = "Last Checked (IST): " + site.lastChecked;
+        card.appendChild(lastCheckedDiv);
 
-        // Last downtime datetime (IST)
-        const lastDownTd = document.createElement("td");
-        lastDownTd.textContent = site.lastDown || "N/A";
-        tr.appendChild(lastDownTd);
+        // Last Down (IST)
+        const lastDownDiv = document.createElement("div");
+        lastDownDiv.classList.add("last-down");
+        lastDownDiv.textContent = "Last Down (IST): " + (site.lastDown || "N/A");
+        card.appendChild(lastDownDiv);
 
-        tbody.appendChild(tr);
+        container.appendChild(card);
       });
     })
     .catch(error => console.error("Error fetching data.json:", error));
