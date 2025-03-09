@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // Helper function to format dates as dd/mm/yy
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    if (isNaN(date)) return dateString;
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear()).slice(-2);
+    return `${day}/${month}/${year}`;
+  }
+
   fetch("data.json")
     .then(response => response.json())
     .then(data => {
@@ -35,22 +45,30 @@ document.addEventListener("DOMContentLoaded", function() {
         statusDiv.classList.add(statusClass);
         card.appendChild(statusDiv);
 
+        // Optional: Description field (if exists)
+        if (site.description) {
+          const descriptionDiv = document.createElement("div");
+          descriptionDiv.classList.add("description");
+          descriptionDiv.textContent = "Description: " + site.description;
+          card.appendChild(descriptionDiv);
+        }
+
         // Response Time
         const responseTimeDiv = document.createElement("div");
         responseTimeDiv.classList.add("response-time");
         responseTimeDiv.textContent = "Response Time: " + site.responseTime;
         card.appendChild(responseTimeDiv);
 
-        // Last Checked (IST)
+        // Last Checked (IST) with formatted date
         const lastCheckedDiv = document.createElement("div");
         lastCheckedDiv.classList.add("last-checked");
-        lastCheckedDiv.textContent = "Last Checked (IST): " + site.lastChecked;
+        lastCheckedDiv.textContent = "Last Checked (IST): " + formatDate(site.lastChecked);
         card.appendChild(lastCheckedDiv);
 
-        // Last Down (IST)
+        // Last Down (IST) with formatted date
         const lastDownDiv = document.createElement("div");
         lastDownDiv.classList.add("last-down");
-        lastDownDiv.textContent = "Last Down (IST): " + (site.lastDown || "N/A");
+        lastDownDiv.textContent = "Last Down (IST): " + (site.lastDown ? formatDate(site.lastDown) : "N/A");
         card.appendChild(lastDownDiv);
 
         container.appendChild(card);
