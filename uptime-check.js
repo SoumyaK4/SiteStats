@@ -6,18 +6,15 @@ const http = require('http');
 const sites = [
   {
     name: "SoumyaK4",
-    url: "https://soumyak4.in/",
-    description: "Portfolio"
+    url: "https://soumyak4.in/"
   },
   {
     name: "Weiqi Roadmap",
-    url: "https://weiqi.soumyak4.in/",
-    description: "Guide/Resources for Go Game"
+    url: "https://weiqi.soumyak4.in/"
   },
   {
     name: "BadukTube",
-    url: "https://baduklectures.soumyak4.in/",
-    description: "Free Lectures Directory for Go Game"
+    url: "https://baduklectures.soumyak4.in/"
   },
   {
     name: "IGD",
