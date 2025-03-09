@@ -5,8 +5,24 @@ const http = require('http');
 // List your sites here (update with your sites)
 const sites = [
   {
-    name: "Example Site",
-    url: "https://example.com"
+    name: "SoumyaK4",
+    url: "https://soumyak4.in/"
+  },
+  {
+    name: "Weiqi Roadmap",
+    url: "https://weiqi.soumyak4.in/"
+  },
+  {
+    name: "BadukTube",
+    url: "https://baduklectures.soumyak4.in/"
+  },
+  {
+    name: "IGD",
+    url: "https://badukdb.soumyak4.in/"
+  },
+  {
+    name: "Timeline",
+    url: "https://soumyak4.in/Timeline/"
   },
   // Add more sites as needed
 ];
