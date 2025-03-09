@@ -40,14 +40,6 @@
     "lastDown": null
   },
   {
-    "name": "Example Site",
-    "url": "https://example.com",
-    "status": "down",
-    "responseTime": "161ms",
-    "lastChecked": "3/9/2025, 2:19:47 PM",
-    "lastDown": "3/9/2025, 2:19:47 PM"
-  },
-  {
     "name": "SoumyaK4",
     "url": "https://soumyak4.in/",
     "status": "up",
