@@ -1,112 +1,110 @@
-/* Global reset */
+/* Global Reset and Box Sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Base Body Styles */
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #f0f2f5;
+  background-color: #f5f5f5;  /* Light, neutral background */
   color: #333;
+  line-height: 1.6;
 }
 
-/* Container styling */
+/* Main Container */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #ffffff;
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Header styling */
+/* Page Header */
 h1 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-/* Card Container Layout */
+/* Card Container using CSS Grid for Responsive Layout */
 #cards-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Individual Card Styles */
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   padding: 20px;
-  flex: 1 1 calc(45% - 20px);
-  max-width: calc(45% - 20px);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Card Title */
 .card h2 {
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 1.75rem;
   margin-bottom: 10px;
 }
 
+/* Card Link Styling */
 .card a {
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s;
 }
 
 .card a:hover {
-  text-decoration: underline;
+  color: #1d78c1;
 }
 
+/* Card Content Details */
 .card .status {
-  margin: 10px 0;
-  font-size: 1.2em;
+  margin: 12px 0;
+  font-size: 1.2rem;
 }
 
 .card .response-time,
 .card .last-checked,
 .card .last-down {
-  font-size: 0.95em;
-  margin: 4px 0;
+  font-size: 0.95rem;
+  margin: 6px 0;
   color: #555;
 }
 
-/* Status colors */
+/* Status Colors */
 .status-up {
-  color: green;
+  color: #28a745;
   font-weight: bold;
 }
 .status-slow {
-  color: orange;
+  color: #ffc107;
   font-weight: bold;
 }
 .status-down {
-  color: red;
+  color: #dc3545;
   font-weight: bold;
 }
 
-/* Responsive: One card per row on small screens */
-@media screen and (max-width: 600px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
+/* Responsive adjustments for smaller screens */
+/* (Cards are handled by CSS Grid; no extra media query needed here) */
 
-/* Dark mode styles */
+/* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -114,19 +112,16 @@ h1 {
   }
   .container {
     background-color: #1e1e1e;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
   .card {
     background-color: #2c2c2c;
-    border: 1px solid #333;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border-color: #444;
   }
   .card a {
     color: #4aa3df;
   }
-  .card .response-time,
-  .card .last-checked,
-  .card .last-down {
-    color: #ccc;
+  .card a:hover {
+    color: #78c2e0;
   }
 }
