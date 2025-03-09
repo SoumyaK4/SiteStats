@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Helper function to format dates as dd/mm/yy
+  // Helper function to format dates as dd/mm/yy, HH:MM:SS
   function formatDate(dateString) {
     const date = new Date(dateString);
     if (isNaN(date)) return dateString;
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = String(date.getFullYear()).slice(-2);
-    return `${day}/${month}/${year}`;
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    return `${day}/${month}/${year}, ${hours}:${minutes}:${seconds}`;
   }
 
   fetch("data.json")
@@ -59,13 +62,13 @@ document.addEventListener("DOMContentLoaded", function() {
         responseTimeDiv.textContent = "Response Time: " + site.responseTime;
         card.appendChild(responseTimeDiv);
 
-        // Last Checked (IST) with formatted date
+        // Last Checked (IST) with formatted date and time
         const lastCheckedDiv = document.createElement("div");
         lastCheckedDiv.classList.add("last-checked");
         lastCheckedDiv.textContent = "Last Checked (IST): " + formatDate(site.lastChecked);
         card.appendChild(lastCheckedDiv);
 
-        // Last Down (IST) with formatted date
+        // Last Down (IST) with formatted date and time
         const lastDownDiv = document.createElement("div");
         lastDownDiv.classList.add("last-down");
         lastDownDiv.textContent = "Last Down (IST): " + (site.lastDown ? formatDate(site.lastDown) : "N/A");
