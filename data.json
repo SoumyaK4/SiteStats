@@ -14,7 +14,7 @@
     "responseTime": "81ms",
     "lastChecked": "3/9/2025, 1:47:56 PM",
     "lastDown": null
-  },  
+  },
   {
     "name": "BadukTube",
     "url": "https://baduklectures.soumyak4.in",
@@ -38,5 +38,13 @@
     "responseTime": "81ms",
     "lastChecked": "3/9/2025, 1:47:56 PM",
     "lastDown": null
+  },
+  {
+    "name": "Example Site",
+    "url": "https://example.com",
+    "status": "down",
+    "responseTime": "161ms",
+    "lastChecked": "3/9/2025, 2:19:47 PM",
+    "lastDown": "3/9/2025, 2:19:47 PM"
   }
 ]
