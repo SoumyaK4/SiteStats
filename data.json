@@ -35,40 +35,40 @@
     "name": "Timeline",
     "url": "https://soumyak4.in/Timeline/",
     "status": "up",
-    "responseTime": "46ms",
-    "lastChecked": "3/9/2025, 3:47:10 PM",
+    "responseTime": "117ms",
+    "lastChecked": "3/9/2025, 4:42:12 PM",
     "lastDown": null
   },
   {
     "name": "SoumyaK4",
     "url": "https://soumyak4.in/",
     "status": "up",
-    "responseTime": "56ms",
-    "lastChecked": "3/9/2025, 3:46:59 PM",
+    "responseTime": "130ms",
+    "lastChecked": "3/9/2025, 4:42:11 PM",
     "lastDown": null
   },
   {
     "name": "Weiqi Roadmap",
     "url": "https://weiqi.soumyak4.in/",
     "status": "up",
-    "responseTime": "58ms",
-    "lastChecked": "3/9/2025, 3:46:59 PM",
+    "responseTime": "114ms",
+    "lastChecked": "3/9/2025, 4:42:12 PM",
     "lastDown": null
   },
   {
     "name": "BadukTube",
     "url": "https://baduklectures.soumyak4.in/",
     "status": "up",
-    "responseTime": "532ms",
-    "lastChecked": "3/9/2025, 3:47:00 PM",
+    "responseTime": "236ms",
+    "lastChecked": "3/9/2025, 4:42:12 PM",
     "lastDown": null
   },
   {
     "name": "IGD",
     "url": "https://badukdb.soumyak4.in/",
-    "status": "down",
-    "responseTime": "10066ms",
-    "lastChecked": "3/9/2025, 3:47:10 PM",
+    "status": "up",
+    "responseTime": "236ms",
+    "lastChecked": "3/9/2025, 4:42:12 PM",
     "lastDown": "3/9/2025, 3:47:10 PM"
   }
 ]
