@@ -76,6 +76,12 @@ h1 {
   font-size: 1.2em;
 }
 
+.card .description {
+  font-size: 1em;
+  margin: 8px 0;
+  color: #777;
+}
+
 .card .response-time,
 .card .last-checked,
 .card .last-down {
