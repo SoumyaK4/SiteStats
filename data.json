@@ -4,42 +4,42 @@
     "url": "https://weiqi.soumyak4.in/",
     "status": "up",
     "description": "Guide/Resources for Go Game",
-    "responseTime": "127ms",
-    "lastChecked": "3/10/2025, 10:46:10 PM",
+    "responseTime": "62ms",
+    "lastChecked": "3/10/2025, 11:52:36 PM",
     "lastDown": null
   },
   {
     "name": "BadukTube",
     "url": "https://baduklectures.soumyak4.in/",
-    "status": "up",
+    "status": "down",
     "description": "Free Lectures Directory for Go Game",
-    "responseTime": "645ms",
-    "lastChecked": "3/10/2025, 10:46:11 PM",
-    "lastDown": "3/10/2025, 6:56:28 PM"
+    "responseTime": "10060ms",
+    "lastChecked": "3/10/2025, 11:52:46 PM",
+    "lastDown": "3/10/2025, 11:52:46 PM"
   },
   {
     "name": "SoumyaK4",
     "url": "https://soumyak4.in/",
     "status": "up",
     "description": "Portfolio",
-    "responseTime": "122ms",
-    "lastChecked": "3/10/2025, 10:46:10 PM",
+    "responseTime": "65ms",
+    "lastChecked": "3/10/2025, 11:52:36 PM",
     "lastDown": null
   },
   {
     "name": "Timeline",
     "url": "https://soumyak4.in/Timeline/",
     "status": "up",
-    "responseTime": "121ms",
-    "lastChecked": "3/10/2025, 10:46:11 PM",
+    "responseTime": "64ms",
+    "lastChecked": "3/10/2025, 11:52:56 PM",
     "lastDown": null
   },
   {
     "name": "IGD",
     "url": "https://igd.soumyak4.in/",
-    "status": "up",
-    "responseTime": "250ms",
-    "lastChecked": "3/10/2025, 10:46:11 PM",
-    "lastDown": null
+    "status": "down",
+    "responseTime": "10074ms",
+    "lastChecked": "3/10/2025, 11:52:56 PM",
+    "lastDown": "3/10/2025, 11:52:56 PM"
   }
 ]
