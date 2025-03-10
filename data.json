@@ -36,14 +36,6 @@
   },
   {
     "name": "IGD",
-    "url": "https://badukdb.soumyak4.in/",
-    "status": "down",
-    "responseTime": "10ms",
-    "lastChecked": "3/10/2025, 4:42:40 PM",
-    "lastDown": "3/10/2025, 4:42:40 PM"
-  },
-  {
-    "name": "IGD",
     "url": "https://igd.soumyak4.in/",
     "status": "up",
     "responseTime": "347ms",
