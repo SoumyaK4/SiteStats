@@ -18,7 +18,7 @@ const sites = [
   },
   {
     name: "IGD",
-    url: "https://badukdb.soumyak4.in/"
+    url: "https://igd.soumyak4.in/"
   },
   {
     name: "Timeline",
